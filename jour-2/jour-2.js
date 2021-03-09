@@ -168,7 +168,13 @@ switch (month) {
 
 //  Bonus III
 
-var roundedNumber = 3.6;
+var roundedNumber = 1.5;
+var str = roundedNumber.toString();
+var decimalNum = ab = roundedNumber - Math.floor(parseInt(roundedNumber));  //
 
-var result = Math.floor(roundedNumber);
+if ((decimalNum) < 0.5) {
+    console.log(Math.floor(roundedNumber));
+} else {
+    console.log(Math.ceil(roundedNumber));
+}
 
