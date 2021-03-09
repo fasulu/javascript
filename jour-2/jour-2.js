@@ -72,7 +72,7 @@ var result = (password.length);
 console.log(result);
 
 if (result >= 6) {
-    console.log("The password is secure (more than 5 characters)");
+    console.log("The password is secure (it is more than 5 characters)");
 } else{
     console.log("Password is insecure, it is less than 6 characters")
 }
@@ -168,9 +168,11 @@ switch (month) {
 
 //  Bonus III
 
-var roundedNumber = 1.5;
-var str = roundedNumber.toString();
-var decimalNum = ab = roundedNumber - Math.floor(parseInt(roundedNumber));  //
+var roundedNumber = 102.46465464514;
+
+// var decimalNum = roundedNumber - Math.floor(parseInt(roundedNumber));    // parseInt roundnumber & math floor it down to round then substract it
+                                                                            // from roundnumber to get decimal value
+roundedNumber = roundedNumber - Math.floor(roundedNumber);                  // another way of spliting decimal value from given number
 
 if ((decimalNum) < 0.5) {
     console.log(Math.floor(roundedNumber));
