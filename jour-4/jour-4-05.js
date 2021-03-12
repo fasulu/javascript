@@ -1,18 +1,16 @@
 // 05
 
-addUp(65);
-
-// for(i=0; i<=79; i++) {
-//     num=i;
-//     addUp(num);
-// }
+addUp(12);
 
 function addUp(num) {
 
-    var temp = num + 12;
-    if(temp == 78){
-        console.log("Obtenez 78")
-    }else {
-        console.log("Pas Obtenez 78")
+    var temp=0;
+
+    for (i = 0; i < (num + 1); i++) {
+        temp = temp + i;
+        console.log(temp);
+        if (temp == 78) {
+            console.log("Obtenez 78")
+        }
     }
- }
+}
