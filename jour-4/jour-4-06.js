@@ -13,6 +13,7 @@ function format(num) {
     // console.log("minutes = " + Math.trunc(min));
     var temp2 = Math.trunc(temp1);
     var temp3 = Number(temp1 - temp2);
+
     min = temp3*60;
     // console.log("Seconds = " + Math.ceil(min));
 
