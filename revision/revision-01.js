@@ -5,15 +5,16 @@
 // - Appelez votre fonction avec "konexio" comme argument et vérifiez que vous obtenez 
 //  "eiknoox"
 
+function sortLetters(str) {
 
-for(i=0;i<=sentence.length; i++) {
+    var sentence = [];
+    for (i = 0; i <= str.length-1; i++) {
 
-var sentence = [];
-    splitSentence.push(sentence[i]);
-      
-    
+        sentence.push(str[i]);
+        
+    }
+    var b = sentence.sort();
+    return b.join("");
 }
-var b = sentence.sort();
-return b.join("");
-​
+
 console.log(sortLetters("konexio"));
