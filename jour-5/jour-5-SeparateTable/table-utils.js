@@ -11,6 +11,8 @@
 function multiply(num1) {
     // console.log(num1);
 
+    // var num1 = parseInt(num1);
+
     if (isNaN(num1)) {   // check is number or not
         console.log("Not a number - Error");
     } else {
@@ -23,11 +25,15 @@ function multiply(num1) {
 function addition(num1) {
     // console.log(num1);
 
+    // var num1 = parseInt(num1);
+
     if (isNaN(num1)) {   // check is number or not
         console.log("Not a number - Error");
     } else {
         for (i = 1; i <= 10; i++) {
-            console.log(i + " + " + num1 + " = " + (i * num1)); // prepare table
+            console.log(i + " + " + num1 + " = " + (i + num1)); // prepare table
         }
     }
 }
+
+module.exports = { addition, multiply };
