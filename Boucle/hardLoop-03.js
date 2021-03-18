@@ -29,6 +29,12 @@ for (var i = 0; i < 50; i++) {
 }
 console.table(numbers); // show table array data
 
+while (numbers[i] < 75 || numbers[i]> 100) {
+
+        i++;
+        console.log(numbers[i]);
+
+}
 while (counter <= 50) {
 
     counter++;
@@ -36,7 +42,7 @@ while (counter <= 50) {
     tempString = numbers[counter];
 
     if(tempString > 75 && tempString < 101){
-           console.log(tempString);             // show first value between 75 and 100 in array
+           console.log("first item between 75 and 100 is " + tempString);             // show first value between 75 and 100 in array
            break;
     }
 

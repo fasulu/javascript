@@ -36,21 +36,32 @@ console.log(result);
 var test = 143;
 var bis = 219;
 
-if (test < bis){
-    console.log(" test < bis = true");
-} 
+// if (test < bis){
+//     console.log(" test < bis = true");
+// } 
 
-if (test < bis) {
-    console.log(test > bis);
-} 
+// if (test < bis) {
+//     console.log(test > bis);
+// } 
 
-if (test == bis){
-    console.log("test is not equal to bis");
-}
+// if (test == bis){
+//     console.log("test is not equal to bis");
+// }
 
-if (test !== bis) {
-    console.log("test not equal to bis")
-}
+// if (test !== bis) {
+//     console.log("test not equal to bis")
+// }
+
+
+console.log("> : ", test > bis);
+console.log("< : ", test < bis);
+console.log(">= : ", test >= bis);
+console.log("<= : ", test <= bis);
+console.log("== : ", test == bis);
+console.log("=== : ", test === bis);
+console.log("!= : ", test != bis);
+console.log("!== : ", test !== bis);
+
 
 // 06 - Condition
 
@@ -168,11 +179,11 @@ switch (month) {
 
 //  Bonus III
 
-var roundedNumber = 102.46465464514;
+var roundedNumber = 102.16465464514;
 
 // var decimalNum = roundedNumber - Math.floor(parseInt(roundedNumber));    // parseInt roundnumber & math floor it down to round then substract it
                                                                             // from roundnumber to get decimal value
-roundedNumber = roundedNumber - Math.floor(roundedNumber);                  // another way of spliting decimal value from given number
+decimalNum = roundedNumber - Math.floor(roundedNumber);                  // another way of spliting decimal value from given number
 
 if ((decimalNum) < 0.5) {
     console.log(Math.floor(roundedNumber));
@@ -180,3 +191,25 @@ if ((decimalNum) < 0.5) {
     console.log(Math.ceil(roundedNumber));
 }
 
+// Bonus III.c
+ var strNum = roundedNumber.toString();
+
+// var position = strNum.split(".")
+// console.log(position);
+
+// var strDecimal = strNum.substring(position);
+// console.log(strDecimal);
+
+var roundedNumber = 10.66465464514;
+var strNum = roundedNumber.toString();
+
+var [a, b] = strNum.split(".");
+// console.log(b, typeof b);
+var numDecimal = b.substring(0,1);
+// console.log(numDecimal);
+
+if(parseInt(numDecimal) < 5) {
+    console.log(Math.floor(roundedNumber));
+} else {
+    console.log(Math.ceil(roundedNumber));
+}

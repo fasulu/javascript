@@ -18,3 +18,5 @@ function sortLetters(str) {
 }
 
 console.log(sortLetters("konexio"));
+
+// sortLetters(process.argv[2]) ;  // using nodejs method

@@ -1,5 +1,5 @@
 // 06
-var num = 3700;
+var num = 3800;
 
 format(num);
 

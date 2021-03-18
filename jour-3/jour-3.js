@@ -1,80 +1,78 @@
 
-// // 01
+// // // 01
 
-var fruits = ["mango", "lemon", "blueberry"];
-console.log(fruits);
+// var fruits = ["mango", "lemon", "blueberry"];
+// console.log(fruits);
 
-console.table(fruits);
+// console.table(fruits);
 
-// // 02 
+// // // 02 
 
-var ingredients = ["eggs", "milk", "butter"];
-console.log(ingredients[1,2]);
-
-
-// // 03
-
-var objects = ["pen", "book", "lamp"];
-objects.unshift("chair");
-console.log(objects);
-
-objects.pop("lamp");
-console.log(objects);
-
-objects.push("laptop");
-console.log(objects);
-
-objects.shift("chair");
-console.log(objects);
+// var ingredients = ["eggs", "milk", "butter"];
+// console.log(ingredients[1, 2]);
 
 
-// // 04
+// // // 03
 
-var numbers = [10, 8, 12, 6];
+// var objects = ["pen", "book", "lamp"];
+// objects.unshift("chair");  // insert in front of an array
+// console.log(objects);
 
-console.log(numbers.reverse());
+// objects.pop("lamp");   // remove from end of an array
+// console.log(objects);
 
-// var sortNum = numbers.sort(function(a, b) {return a - b}); 
-var sortNum = numbers.sort((a, b) => a - b); 
-console.log(sortNum);
+// objects.push("laptop");  // add at end of an array
+// console.log(objects);
 
-// // 05 
-
-var total = 0;
-var limit = 10;
-var finalTotal = 0;
-for (i=0; i <= limit; i++) {
-    total = total + i;
-    console.log(total,'+');
-}
-console.log("Total apres boucle " + total);
+// objects.shift("chair");  // remove the one in first of an array
+// console.log(objects);
 
 
-// 06
+// // // 04
 
-var sentence = "Hello Konexio !";
-var splitSentence = [];
-splitSentence = sentence.split("");
-var result;
-var len = sentence.length;
+// var numbers = [10, 8, 12, 6];
 
-for(i=0; i<=(sentence.length-1); i++) {
+// console.log(numbers.reverse());
 
-    // console.log(((i-len).toString()).substring(1));
+// // var sortNum = numbers.sort(function(a, b) {return a - b}); 
+// var sortNum = numbers.sort((a, b) => a - b);
+// console.log(sortNum);
 
-    result= splitSentence[((i-len).toString()).substring(1)];
+// // // 05 
 
-    console.log(result);
-    
-}
+// var total = 0;
+// var limit = 10;
+// var finalTotal = 0;
+// for (i = 0; i <= limit; i++) {
+//     total = total + i; // total += i
+//     console.log(total, '+');
+// }
+// console.log("Total apres boucle " + total);
 
+
+// // 06
+
+// var sentence = "Hello Konexio !";
+// var splitSentence = [];
+// splitSentence = sentence.split("");
+// var result =[];
+// var len = sentence.length;
+
+
+
+// for (i = 0; i <= (sentence.length ); i++) {
+//     var item =splitSentence[i];
+//     result.unshift(item);
+
+// }
+// console.table(result.join(""));
 
 // Bonus 
 
 var result1;
 var result2;
 
-for (i = 1; i < 100; i++) {
+for (i = 1; i < 101; i++) {
     result1 = i / 3;
     result2 = i / 5;
 
@@ -95,17 +93,73 @@ for (i = 1; i < 100; i++) {
     }
 }
 
-// // Bonus II
+for (i = 1; i < 101; i++) {
 
-var total = 0;
-var limit = 10;
-var finalTotal = 0;
+    var a = i % 3; //console.log(a);
+    var b = i % 5; //console.log(a);
 
-while (total < limit) {
-    total++;
-    finalTotal = total + finalTotal;
-    console.log(total,'+');
+    if(a == 0){
+        console.log(i + " / " + "3" + " = " + "fizz");
+    }
+    
+    if(b == 0){
+        console.log(i + " / " + "5" + " = " + "buzz");
+    }
+
+    if((a == 0) && (b == 0)) {
+        console.log(i + " / " + " 3 et 5" + " = " + "fizzbuzz");
+    }
 }
-    console.log("Total apres boucle " + finalTotal);
 
 
+
+// Bonus II
+
+// var total = 0;
+// var limit = 10;
+// var finalTotal = 0;
+
+// while (total < limit) {
+//     total++;
+//     finalTotal = total + finalTotal;
+//     console.log(total, '+');
+// }
+// console.log("Total apres boucle " + finalTotal);
+
+// Bonus III
+
+// var nom = ["Lucas", "Fethy", "Asma", "Rocío", "Bakagnan", "Moncef",
+//     "Mehdi", "Mugilan", "Francisco", "Amir", "Suleman", "Sabrina", 
+//     "Lionel", "Karim", "Faruk", "Ikram", "Axel", "Fasulu", "Abdou"];
+
+// var len = nom.length;
+// var nomRdm = nom[Math.floor(Math.random() * len)];
+// console.table(nom);
+// console.log('The computer chose:' + nomRdm);
+
+
+// Bonus IV
+
+var myArray = [];
+var min = 0;
+var max = 100;
+
+var numRdm;
+
+for (i=0; i<21; i++) {
+    numRdm = Math.floor(Math.floor(Math.random() * max - (min + 1)));
+    myArray.push(numRdm);
+}
+console.table(myArray);
+
+// var numMax = array[0];
+
+// for (i=1; i < array.length; i++) {
+//     var item = array[i];
+
+//     if(item > numMax) {
+//         numMax = item;
+//     }
+// }
+
+// console.log(numMax);

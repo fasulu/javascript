@@ -22,7 +22,10 @@ var tempString = [];
 
 for (var i = 0; i < words.length; i++) {
 
-    console.log(words.length)
+    tempString = words[i].split("");
+    // console.log(words.length)
+
+    
 
     console.log(words[i]);
 }

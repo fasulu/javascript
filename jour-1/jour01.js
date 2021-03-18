@@ -43,5 +43,5 @@ console.log(str1 + "\n" + str2) ;
 var changed = "Bonjour";
 console.log(changed.replace("Bonjour", "Banjaur"));
 
-var str3 = String.prototype.toUpperCase(changed);
-console.log(str3);
+var bonjour = "Bonjour";
+console.log(bonjour.replace(/o/g, "a")); // finds all "o" and replace with "a"

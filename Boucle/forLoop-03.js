@@ -14,7 +14,7 @@ for (var i = 1; i <= rolling; i++) {
 
     if (diceValue >= 5) {
         
-        console.log(diceValue);
+        // console.log(diceValue);
         total = total + diceValue;
         
     }

@@ -5,7 +5,7 @@ var total = 0;
 var joueur1 = 0;
 var joueur2 = 0;
 
-var temp = 0;
+temp = 0;
 
 
 launchDice(numberOfDice);
@@ -14,7 +14,7 @@ launchDice(numberOfDice);
 joueur2 = total;
 
 function launchDice(numberOfDice) {
-    var temp = 0;
+    temp = 0;
     total = 0;
     var numStart = 0;
     var num = numberOfDice;

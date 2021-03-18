@@ -10,7 +10,7 @@ while (counter <= numEnd) {
     counter++;
     temp = numStart % 2
     if (temp === 0) {
-        console.log(temp);
+        // console.log(temp);
         console.log("Number Paire = " + numStart);
     }
     numStart++;

@@ -21,13 +21,14 @@ var numEnd = 200;
 
 for (var i = 0; i < 50; i++) {
 
-    numRdm = Math.floor(Math.random() * (numEnd - numStart + 1) + numStart);
+    numRdm = Math.floor(Math.random() * (numStart - numEnd + 1) + numEnd);
     // console.log("counter i = " + i + " " + numRdm);
     numTotal = numTotal + numRdm;
     numbers.push(numRdm);
 
 }
 console.table(numbers);     // show array data
+console.log(numTotal);
 
 for (i = 0; i < numbers.length; i++) {
 
