@@ -17,14 +17,43 @@ function onErr(err) {
 }
 
 prompt.get(
-    ["username", "password"],
+    [
+        "username", 
+        "password"
+    ],
+    
     function (err, res) {
+
         if (err) {
             return onErr(err);
         }
 
-        usrName = res.username;
-        password = res.password;
+        password = res.passWord;
+        email = res.eMail;
 
-        console.log(usrName, password);
+        console.log(typeof email, eMail, password);
+
+        // var alphaExpression = /^[a-zA-Z1-90-]*$/g
+        //         if(res.username.match(alphaExpression)) {
+        //     console.log("Valid Name");
+        // } else {
+        //     console.log("Invalid Name");
+        // }
+
+        var emailExpression = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if(res.username.match(emailExpression)) {
+            console.log("Valid Username");
+        } else {
+            console.log("Invalid Username");
+        }
+
+        // var passExpression = /^()$/;
+
+        // if(res.password.match(passExpression)) {
+        //     console.log("Valid Password");
+        // } else {
+        //     console.log("Invalid Password");
+        // }
+
     });
