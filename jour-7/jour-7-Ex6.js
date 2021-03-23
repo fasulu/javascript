@@ -37,7 +37,7 @@
 
 // // resultat attendu
 // [
-	
+
 // 	{
 // 		name: "brownie",
 // 		flavor: "chocolate",
@@ -79,22 +79,28 @@ var cakes = [
 	},
 ];
 
-var changeSold = cakes.map(function(name, status){
+var changeSold = cakes.map(function (elem) {
 
-    if (name.name == "donut" ) {
-        
-        cakes[status]= 'sold out'
-        
-    }
-    console.log(changeSold);
-    
-    // if(name == "donut"){
-    //     changeSold[status] = "sold out"
-    // }
-})
+	// console.log(elem.name)
+
+	if (elem.name == 'donut') {
+
+		elem.status = 'sold out';
+
+	}
+	if (elem.name == 'brownie') {
+
+		elem.status = 'sold out';
+
+	}
+});
 
 
-var soldout = cakes.filter(function(status){
-    return status == 'sold out';
-})
+var soldout = cakes.filter(function (elem) {
+
+	// console.log(elem)
+
+	return (elem.status == "sold out") ;
+});
+
 console.log(soldout);
