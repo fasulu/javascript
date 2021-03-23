@@ -42,7 +42,7 @@ var longNames = [
 	}
 ];
 
-var shortNames = longNames.map(function(fName) {
-    return fName;
+var shortNames = longNames.map(function(name) {
+    return name.firstName + " " + name.lastName;
 });
 console.log(shortNames);
