@@ -2,36 +2,38 @@ var request = require("request");
 
 var nameCountry = [];
 
-request.get("https://restcountries.eu/rest/v1/all",
+setTimeout(function nameOfCountry() {
+    request.get("https://restcountries.eu/rest/v1/all",
 
-    function (err, res, body) {
+        function (err, res, body) {
 
-        var tempArray1 = JSON.parse(body);
+            var tempArray1 = JSON.parse(body);
 
-        console.log(typeof tempArray1);
+            console.log(typeof tempArray1);
 
-        //*****************avec for loop */
+            //*****************avec for loop */
 
-        // for(i=0; i<=tempArray1.length-1; i++) {
+            // for(i=0; i<=tempArray1.length-1; i++) {
 
-        //     // console.log(tempArray1[i].name);
-        //     nameCountry.push(tempArray1[i].name);
-        // }
-        // console.log(nameCountry.join("-"));  
+            //     // console.log(tempArray1[i].name);
+            //     nameCountry.push(tempArray1[i].name);
+            // }
+            // console.log(nameCountry.join("-"));  
+            //**************************** */
 
-        //**************************** */
+            //***************avec map & call back funciton */
 
-        //***************avec map & call back funciton */
+            var tempArry2 = tempArray1.map(
+                function (elem) {
 
-        var tempArry2 = tempArray1.map(
-            function(elem) {
-                
-                return elem.name;
-            }
-        );
+                    return elem.name;
+                }
+            );
 
-        console.log(tempArry2.join("-"));
+            console.log(tempArry2.join("-"));
 
-        //******************************************** */  
-    }
-);
+            //******************************************** */  
+        }
+    );
+}, 2500);
+

@@ -9,16 +9,20 @@ var request = require("request");
 var jsonArray = [];
 var chuckJoke = [];
 
-request.get("https://api.chucknorris.io/jokes/random",
+setTimeout(function chuck() {
 
-    function (err, res, body) {
+    request.get("https://api.chucknorris.io/jokes/random",
 
-        jsonArray = JSON.parse(body);
+        function (err, res, body) {
 
-        // console.log(typeof jsonArray);
+            jsonArray = JSON.parse(body);
 
-        chuckJoke = jsonArray.value;
+            // console.log(typeof jsonArray);
 
-        console.log(chuckJoke);
-    }
-);
+            chuckJoke = jsonArray.value;
+
+            console.log(chuckJoke);
+        }
+    );
+} , 2500);
+
