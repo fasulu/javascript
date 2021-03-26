@@ -16,83 +16,79 @@ var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 ];
 
-var rover = [
-    {
-        direction: "N"
 
-    }
-];
+// 
 
-turnLeft(directionL);
+var rover = { "direction": "N" };
 
-turnRight(directionR);
+var currentPosition = [0, 0];
 
-pilotRover(pilot);
+var moveToPosition = [3, 3];
 
-moveForward(0, 1);
 
+
+turnRight("R");
+
+// turnLeft("L");
+
+pilotRover();
+
+moveForward(3, 4);
 
 
 function turnLeft(directionL) {
 
     var temp = directionL;
 
-    // if(rover.direction === "E" || rover.direction === "S" || rover.direction === "W") {
+    grid[currentPosition] = roverFaceLeft;
 
-    //         rover.direction = "E"
+    console.log(grid[currentPosition])
 
-    // }
-
-    switch (temp) {
-
-        case "E":
-            console.log()
-            break;
-        case "N":
-            console.log()
-            break;
-        case "S":
-            console.log()
-            break;
-        case "W":
-            console.log()
-            break;
-        default:
-    }
+    moveForward(moveForward);
 
 }
 
-function turnRight(rover) {
+function turnRight(directionR) {
 
+    var temp = directionR;
 
-    if (grid[0, 9] === "R") {
+    grid[currentPosition] = "R";
 
-        rover.direction = "S"
-        grid[9, 0] = "S"
+    console.log(grid[currentPosition])
 
-        console.log(rover.direction)
-        console.log("Current Position:  " + +grid[0, 1]);
-
-    }
-
-    if (rover[0].direction === "N") {
-
-        rover.direction = "R"
-
-        grid[0, 1] = "R"
-
-
-        console.log(rover.direction)
-        console.log("Current Position:  " + +grid[0, 1]);
-
-        turnRight(rover);
-
-    }
+    moveForward(moveForward)
 
 }
 
 function moveForward(x, y) {
 
-    grid[x, y] = "O"
+    var tempMove = [x, y];
+
+    for (i = 0; i <= x; i++) {
+
+        // console.log(i)
+
+        for (j = 0; j <= y; j++) {
+
+            // console.log(y);
+
+            grid[i,j] = "R"
+            // console.log( "current move", grid[i,j])
+
+
+        }
+    }
 
 }
+
+function pilotRover() {
+
+
+}
+
+// grid[3,3] = "R";
+
+console.log("rover current location", grid[3,3]);
+// console.log(grid.indexOf("R"));
+// console.log(grid[3,3]);
+console.log(grid);
